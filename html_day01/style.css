@@ -1,0 +1,114 @@
+.logo {
+  display: inline;
+}
+.logo img{
+  width: 400px;
+  padding-left: 100px;
+}
+.phone{
+  color: blue;
+}
+.icon-phone{
+  width: 20px;
+}
+.header-right{
+  float: right;
+  padding-right: 100px;
+  padding-top: 30px;
+}
+.header-text{
+  display: inline;
+}
+a:hover{
+  text-decoration: none !important;
+}
+ul{
+  list-style-type: none;
+}
+.header-image{
+  width: 100%;
+  height: 150px;
+}
+.clr{
+  clear: both;
+}
+.title-category{
+  background-color: #b1b7b9;
+  width: 200px;
+  height: 30px;
+  padding-top: 7px;
+  padding-left: 5px;
+}
+.book{
+  width: 200px;
+  background-color: #b1b7b9;
+}
+.form-book{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+.left-bar{
+  float: left;
+  margin-right: 50px;
+}
+.image-content img{
+  width: 248px;
+  height: 136px;
+}
+.main-content{
+  margin-top: 100px;
+}
+.right-bar{
+  margin-top: 10px;
+}
+.artic{
+  float: left;
+}
+.menu{
+  margin-top: 20px;
+}
+.menu ul {
+  border-top:1px solid #bbb;
+}
+.menu ul li a{
+  display: block;
+  font-size: 20px;
+}
+.menu ul li{
+  float: left;
+  border-right:1px solid #bbb;
+  padding: 10px 30px;
+}
+.figu{
+  width: 250px;
+  height: 220px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #b1b7b9;
+}
+.fter{
+  height: 150px;
+  background-color: #07bda4;
+  margin-top: 40px;
+}
+.about, .support, .social{
+  color: white;
+  float: left;
+}
+.about ul, .support ul, .social ul{
+  margin-left: -40px;
+}
+.about ul li a, .support ul li a, .social ul li a{
+  color: white;
+}
+.support{
+  margin-left: 50px;
+  margin-right: 130px;
+}
+.social ul li a img{
+  width: 20px;
+  margin-right: 7px;
+}
