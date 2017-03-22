@@ -1,0 +1,47 @@
+%float-left{
+  float: left;
+}
+%float-right{
+  float: right;
+}
+%phone-number{
+  font-weight: bold;
+  color: #F8A826;
+}
+%phone-head{
+  font-size: 12px;
+  img{
+    @extend %float-left;
+    margin-right: 12px;
+  }
+  @extend %float-left;
+  .phone-number{
+    font-size: 14px;
+    @extend %phone-number;
+  }
+}
+%text-decorate{
+  a:hover{
+    text-decoration: none;
+  }
+}
+%list-style{
+  list-style-type: none;
+}
+%li-footer{
+  @extend %float-left;
+  margin-left: 127px;
+  p{
+    font-weight: bold;
+  }
+  ul{
+    @extend %list-style;
+    padding: 0px;
+    li{
+      @extend %text-decorate;
+      a{
+        color: black;
+      }
+    }
+  }
+}
