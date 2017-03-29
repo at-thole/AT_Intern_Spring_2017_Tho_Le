@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>DOM BOM</title>
+  <link rel="stylesheet" href="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+<body>
+  <div id="js-hello" style="">
+    <input type="text" id="js-name" value="">
+    <button type="button" id="submit">Add</button>
+    <h3>Members</h3>
+    <ul id="js-member">
+    </ul>
+  </div>
+  <script type="text/javascript">
+    $('#submit').click(function(){
+      $('#js-member').append('<li>' + $('#js-name').val() +
+        '<input type="button" class="button" value="Delete"/></li>');
+    });
+    $('#js-member').on('click','input', function () {
+      $(this).parent().remove();
+    });
+  </script>
+</body>
+</html>
+
+
