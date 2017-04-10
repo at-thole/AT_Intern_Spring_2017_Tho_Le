@@ -1,0 +1,45 @@
+<link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
+<button type = "button" class = "btn btn-info" data-toggle = "modal"
+  data-target = "#addTournament">Add tournament</button>
+<table class="table table-vcenter table-striped">
+  <tr>
+    <th class="text-center">Index</th>
+    <th class="text-center">Name</th>
+    <th class="text-center">Detail</th>
+    <th class="text-center">Action</th>
+  </tr>
+  <% @tournaments.each_with_index do |tournament, index| %>
+    <tr>
+      <td class="text-center"><%= index + 1 %></td>
+      <td class="text-center">
+        <%= tournament.name %>
+      </td>
+      <td class="text-center"><a href="/tournaments/<%= tournament.id %>/groups">Details</a></td>
+      <td class="text-center">
+        <form action="/tournaments/delete/<%= tournament.id %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Delete" class="btn btn-danger">
+        </form>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<div id = "addTournament" class = "modal fade" role = "dialog">
+  <div class = "modal-dialog modal-xs">
+    <div class = "modal-content">
+      <form action="/tournaments/add" method="post">
+        <input type="text" name="name" class="form-control">
+        <input type="submit" value="Add" class="btn btn-primary">
+      </form>
+      <div class = "modal-footer">
+        <button type = button" class = "btn btn-default"
+          data-dismiss = "modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
