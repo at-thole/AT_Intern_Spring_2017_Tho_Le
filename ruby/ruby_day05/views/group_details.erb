@@ -1,0 +1,56 @@
+<link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
+<h1 style="text-align: center"><%= @groups.first.tournament.name %></h1>
+<% @groups.each do |group| %>
+  <table class="table table-bordered">
+    <caption style="text-align: center"><h3><%= group.name %></h3></caption>
+    <thead>
+      <th style="text-align: center">Index</th>
+      <th style="text-align: center">Team A</th>
+      <th style="text-align: center">Team B</th>
+      <th style="text-align: center">Time</th>
+      <th style="text-align: center">Score</th>
+    </thead>
+    <tbody>
+      <% group.schedules.each_with_index do |schedule, index| %>
+        <tr>
+          <td style="text-align: center"><%= index + 1 %></td>
+          <td style="text-align: center"><%= schedule.teamA.name %></td>
+          <td style="text-align: center"><%= schedule.teamB.name %></td>
+          <td style="text-align: center; width: 350px">
+            <% if schedule.time.blank? %>
+              <form action="/tournaments/<%= group.tournament_id %>/schedules/add_time"
+                method="post">
+                <input type="datetime-local" name="time" class="form-control"
+                  style="width: 250px; display: inline">
+                <input type="hidden" name="schedule_id" value="<%= schedule.id %>">
+                <button type="submit" class="btn btn-primary" style="float: right">Add
+                </button>
+              </form>
+            <% else %>
+              <%= schedule.time %>
+            <% end %>
+          </td>
+          <td style="text-align: center; width: 300px">
+            <% if schedule.score.blank? %>
+              <form action="/tournaments/<%= group.tournament_id %>/schedules/add_score" method="post">
+                <input type="number" min="0" name="goal_teamA" class="form-control" style="width: 70px; display: inline"> -
+                <input type="number" min="0" name="goal_teamB" class="form-control"
+                  style="width: 70px; display: inline">
+                <input type="hidden" name="schedule_id" value="<%= schedule.id %>">
+                <button type="submit" class="btn btn-primary" style="float: right">Add
+                </button>
+              </form>
+            <% else %>
+              <%= schedule.score %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

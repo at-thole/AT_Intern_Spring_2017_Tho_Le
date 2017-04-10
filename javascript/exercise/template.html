@@ -6,6 +6,8 @@
   <link rel="stylesheet" type="text/css" href="build/style.css">
   <link rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
 </head>
 <body>
   <header class="col-md-10 col-md-offset-1">
@@ -56,6 +58,13 @@
   </div>
   <section class="content">
     <h3>TOUR</h3>
+    <div class="cart">
+      <h2>Giỏ hàng</h2>
+      <p>Bạn đã chọn <br>
+        <span id="num_of_carts">0</span>tour<br>
+        <a href="carts.html" title="chi tiet gio hang"><span>Chi tiết</span></a>
+      </p>
+    </div>
     <nav class="col-md-10 col-md-offset-1">
       <ul>
         <li>
@@ -100,10 +109,11 @@
               </a>
               <p>
                 <a href="#" title="Hà Nội-Phú Quốc">
-                  <strong>HÀ NỘI - PHÚ QUỐC</strong>
+                  <strong class="name-tour">HÀ NỘI - PHÚ QUỐC</strong>
                 </a>
               </p>
               <p class="cost-tour">Giá tour: <span class="cost">5.350.000 VND</span> </p>
+              <img src="images/right-arrow.jpg" alt="detail" class="image-detail">
             </figcaption>
           </figure>
         </li>
@@ -115,10 +125,11 @@
               </a>
               <p>
                 <a href="#" title="Hà Nội-Phú Quốc">
-                  <strong>HÀ NỘI - PHÚ QUỐC</strong>
+                  <strong class="name-tour">HÀ NỘI - ĐÀ NĂNG</strong>
                 </a>
               </p>
               <p class="cost-tour">Giá tour: <span class="cost">5.350.000 VND</span> </p>
+              <img src="images/right-arrow.jpg" alt="detail" class="image-detail">
             </figcaption>
           </figure>
         </li>
@@ -130,10 +141,11 @@
               </a>
               <p>
                 <a href="#" title="Hà Nội-Phú Quốc">
-                  <strong>HÀ NỘI - PHÚ QUỐC</strong>
+                  <strong class="name-tour">HCM - PHÚ QUỐC</strong>
                 </a>
               </p>
-              <p class="cost-tour">Giá tour: <span class="cost">5.350.000 VND</span> </p>
+              <p class="cost-tour">Giá tour: <span class="cost">6.000.000 VND</span> </p>
+              <img src="images/right-arrow.jpg" alt="detail" class="image-detail">
             </figcaption>
           </figure>
         </li>
@@ -145,10 +157,11 @@
               </a>
               <p>
                 <a href="#" title="Hà Nội-Phú Quốc">
-                  <strong>HÀ NỘI - PHÚ QUỐC</strong>
+                  <strong class="name-tour">HÀ NỘI - HCM</strong>
                 </a>
               </p>
-              <p class="cost-tour">Giá tour: <span class="cost">5.350.000 VND</span> </p>
+              <p class="cost-tour">Giá tour: <span class="cost">6.450.000 VND</span> </p>
+              <img src="images/right-arrow.jpg" alt="detail" class="image-detail">
             </figcaption>
           </figure>
         </li>
@@ -160,10 +173,11 @@
               </a>
               <p>
                 <a href="#" title="Hà Nội-Phú Quốc">
-                  <strong>HÀ NỘI - PHÚ QUỐC</strong>
+                  <strong class="name-tour">VINH - PHÚ QUỐC</strong>
                 </a>
               </p>
-              <p class="cost-tour">Giá tour: <span class="cost">5.350.000 VND</span> </p>
+              <p class="cost-tour">Giá tour: <span class="cost">6.750.000 VND</span> </p>
+              <img src="images/right-arrow.jpg" alt="detail" class="image-detail">
             </figcaption>
           </figure>
         </li>
@@ -175,10 +189,11 @@
               </a>
               <p>
                 <a href="#" title="Hà Nội-Phú Quốc">
-                  <strong>HÀ NỘI - PHÚ QUỐC</strong>
+                  <strong class="name-tour">HUÊ - PHÚ QUỐC</strong>
                 </a>
               </p>
-              <p class="cost-tour">Giá tour: <span class="cost">5.350.000 VND</span> </p>
+              <p class="cost-tour">Giá tour: <span class="cost">6.550.000 VND</span> </p>
+              <img src="images/right-arrow.jpg" alt="detail" class="image-detail">
             </figcaption>
           </figure>
         </li>
@@ -190,10 +205,11 @@
               </a>
               <p>
                 <a href="#" title="Hà Nội-Phú Quốc">
-                  <strong>HÀ NỘI - PHÚ QUỐC</strong>
+                  <strong class="name-tour">QUẢNG NAM - HÀ NÔỊ</strong>
                 </a>
               </p>
-              <p class="cost-tour">Giá tour: <span class="cost">5.350.000 VND</span> </p>
+              <p class="cost-tour">Giá tour: <span class="cost">6.150.000 VND</span> </p>
+              <img src="images/right-arrow.jpg" alt="detail" class="image-detail">
             </figcaption>
           </figure>
         </li>
@@ -205,10 +221,11 @@
               </a>
               <p>
                 <a href="#" title="Hà Nội-Phú Quốc">
-                  <strong>HÀ NỘI - PHÚ QUỐC</strong>
+                  <strong class="name-tour">NGHÊ AN - PHÚ QUỐC</strong>
                 </a>
               </p>
-              <p class="cost-tour">Giá tour: <span class="cost">5.350.000 VND</span> </p>
+              <p class="cost-tour">Giá tour: <span class="cost">7.350.000 VND</span> </p>
+              <img src="images/right-arrow.jpg" alt="detail" class="image-detail">
             </figcaption>
           </figure>
         </li>
@@ -220,10 +237,11 @@
               </a>
               <p>
                 <a href="#" title="Hà Nội-Phú Quốc">
-                  <strong>HÀ NỘI - PHÚ QUỐC</strong>
+                  <strong class="name-tour">HÀ NỘI 123 - PHÚ QUỐC</strong>
                 </a>
               </p>
-              <p class="cost-tour">Giá tour: <span class="cost">5.350.000 VND</span> </p>
+              <p class="cost-tour">Giá tour: <span class="cost">3.150.000 VND</span> </p>
+              <img src="images/right-arrow.jpg" alt="detail" class="image-detail">
             </figcaption>
           </figure>
         </li>
@@ -235,10 +253,11 @@
               </a>
               <p>
                 <a href="#" title="Hà Nội-Phú Quốc">
-                  <strong>HÀ NỘI - PHÚ QUỐC</strong>
+                  <strong class="name-tour">HÀ NỘI 321 - PHÚ QUỐC</strong>
                 </a>
               </p>
-              <p class="cost-tour">Giá tour: <span class="cost">5.350.000 VND</span> </p>
+              <p class="cost-tour">Giá tour: <span class="cost">7.450.000 VND</span> </p>
+              <img src="images/right-arrow.jpg" alt="detail" class="image-detail">
             </figcaption>
           </figure>
         </li>
@@ -250,10 +269,11 @@
               </a>
               <p>
                 <a href="#" title="Hà Nội-Phú Quốc">
-                  <strong>HÀ NỘI - PHÚ QUỐC</strong>
+                  <strong class="name-tour">HÀ NỘI 1 - PHÚ QUỐC</strong>
                 </a>
               </p>
-              <p class="cost-tour">Giá tour: <span class="cost">5.350.000 VND</span> </p>
+              <p class="cost-tour">Giá tour: <span class="cost">8.650.000 VND</span> </p>
+              <img src="images/right-arrow.jpg" alt="detail" class="image-detail">
             </figcaption>
           </figure>
         </li>
@@ -265,10 +285,11 @@
               </a>
               <p>
                 <a href="#" title="Hà Nội-Phú Quốc">
-                  <strong>HÀ NỘI - PHÚ QUỐC</strong>
+                  <strong class="name-tour">HÀ NỘI - PHÚ QUỐC 123</strong>
                 </a>
               </p>
-              <p class="cost-tour">Giá tour: <span class="cost">5.350.000 VND</span> </p>
+              <p class="cost-tour">Giá tour: <span class="cost">4.350.000 VND</span> </p>
+              <img src="images/right-arrow.jpg" alt="detail" class="image-detail">
             </figcaption>
           </figure>
         </li>
@@ -308,5 +329,6 @@
       </div>
     </div>
   </footer>
+  <script src="javascript/custom.js"></script>
 </body>
 </html>

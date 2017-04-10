@@ -1,7 +1,7 @@
-header section .phone img, header section .phone-online img, header section .phone, header section .phone-online, footer .infor, footer .community, header section .header-right, header section .logo-header, header section .menu ul li, .content nav ul li, .content main ul li, footer, footer .logo-footer, footer .email, footer .email input, footer .email button {
+header section .phone img, header section .phone-online img, header section .phone, header section .phone-online, footer .infor, footer .community, header section .header-right, header section .logo-header, header section .menu ul li, .content nav ul li, .content main ul li, .content main ul li figure figcaption .cost-tour, footer, footer .logo-footer, footer .email, footer .email input, footer .email button {
   float: left; }
 
-header section .contact-header {
+header section .contact-header, .content main ul li figure figcaption .image-detail {
   float: right; }
 
 header section .phone .phone-number, header section .phone-online .phone-number {
@@ -110,6 +110,10 @@ header section .menu {
         font-weight: bold; }
     .content main ul li figure figcaption .cost-tour {
       margin-top: -10px; }
+    .content main ul li figure figcaption .image-detail {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px; }
 
 footer div {
   margin-left: 20px; }
@@ -127,5 +131,8 @@ footer .email {
     width: 90px;
     height: 55px;
     border: none; }
+
+.cart {
+  float: right; }
 
 /*# sourceMappingURL=style.css.map */
