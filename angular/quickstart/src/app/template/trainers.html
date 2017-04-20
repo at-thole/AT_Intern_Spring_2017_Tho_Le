@@ -1,0 +1,45 @@
+<!-- <input type="text" [(ngModel)]="input_team_name" placeholder="Enter team name">
+<input type="button" name="bt-search" value="Search" (click)="get_team_name()"> -->
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Birthday</th>
+    <th>Team</th>
+    <th>Email</th>
+    <th>Github</th>
+  </tr>
+  <tr *ngFor="let trainer of trainers; let i = index">
+    <td> {{trainer.infor.name}} </td>
+    <td> {{trainer.infor.birthday}} </td>
+    <td> {{trainer.infor.team}} </td>
+    <td> {{trainer.account.email}} </td>
+    <td> {{trainer.account.github}} </td>
+    <button (click)="display(i)"> Detail </button>
+  </tr>
+</table>
+<!-- <detail [selected]="selected"></detail>
+<intern [team_name]="team_name"></intern> -->
+<form #f="ngForm" (ngSubmit)="addMember(f)">
+
+  <fieldset ngModelGroup="infor">
+    <label for="name">Name</label>
+    <input type="text" name="name" ngModel required>
+
+    <label for="birthday">Birthday</label>
+    <input type="text" name="birthday" ngModel required>
+
+    <label for="team">Team</label>
+    <input type="text" name="team" ngModel required>
+  </fieldset>
+
+  <fieldset ngModelGroup="account">
+    <label for="email">Email</label>
+    <input type="email" name="email" ngModel required>
+
+    <label for="github">Github</label>
+    <input type="text" name="github" ngModel required>
+
+  </fieldset>
+
+  <button [disabled]="!f.valid" type="submit">Submit</button>
+</form>

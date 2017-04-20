@@ -1,0 +1,18 @@
+<div *ngIf="selected!=null">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Avatar</th>
+      <th>Joined</th>
+    </tr>
+
+    <tr>
+      <td>{{trainers[selected].name}}</td>
+      <td>{{trainers[selected].team}}</td>
+      <td>{{trainers[selected].avatar}}</td>
+      <td>{{trainers[selected].joined}}</td>
+      <!-- <td>{{trainers[selected].birthday | date: "fullDate" | uppercase }}</td> -->
+    </tr>
+  </table>
+</div>
