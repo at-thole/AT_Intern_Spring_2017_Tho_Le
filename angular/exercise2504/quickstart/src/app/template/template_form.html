@@ -1,0 +1,28 @@
+<form [formGroup]="firstform" (ngSubmit)="convertemail()">
+  <label for="firstname">First Name</label>
+  <input type="text" name="firstname" class="form-control" [formControl]="firstname">
+  <div [hidden]="firstname.valid || firstname.untouched">
+    <div style="color: red" [hidden]="!firstname.hasError('required')">
+      The firstname is required.
+    </div>
+    <div style="color: red" [hidden]="!firstname.hasError('minlength')">
+      >= 6 charactor.
+    </div>
+  </div>
+
+  <label for="lastname">Last Name</label>
+  <input type="text" name="lastname" [formControl]="lastname">
+  <div [hidden]="lastname.valid || lastname.untouched">
+    <div style="color: red" [hidden]="!lastname.hasError('required')">
+      The lastname is required.
+    </div>
+    <div style="color: red" [hidden]="!lastname.hasError('minlength')">
+      >= 6 charactor.
+    </div>
+  </div>
+
+  <label for="email">Email</label>
+  <input type="text" name="email" [formControl]="email">
+
+  <button [disabled]="!firstform.valid" type="submit">log in</button>
+</form>
